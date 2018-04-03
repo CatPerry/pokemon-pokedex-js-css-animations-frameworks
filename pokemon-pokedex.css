@@ -22,11 +22,11 @@ nav a {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 .sticky + .content {
     padding-top: 60px;
-    z-index: 2;
+    z-index: 5;
 }
 .logo {
     display: block;
@@ -39,7 +39,6 @@ nav a {
     transform: translate(-50%, -50%); 
 }
 body {
-    background-color: aliceblue;
     background-image: url(images/fuji1.svg);
     background-size: cover;
     width: 100%;
@@ -47,18 +46,17 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    animation: 
 }
 li {
     background-color: rgba(25, 106, 255, 0.884);
     font-family: fantasy;
     color: white;
     font-size: 1.8em;
-    padding: 3px;
+    padding: 5px;
     text-decoration: none;
     display: grid;
     border-radius: 3px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 img {
     margin: 3px;
@@ -89,8 +87,9 @@ img {
     left: 50px;
     transform: scale(0.85);
 }
+/* css shake/cubic bezier animation done with help from https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 #guzzlord:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+    animation: shake 0.60s cubic-bezier(.36,.07,.19,.97) both infinite;
     animation-fill-mode: forwards;
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
@@ -102,15 +101,13 @@ img {
     }
     20%, 80% {
     transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-6px, -2px, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(6px, 2px, 0);
-  }
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-6px, -2px, 0);
+    }
+    40%, 60% {
+        transform: translate3d(6px, 2px, 0);
+    }
 }
 .guzzlord {
     position: absolute;
@@ -128,49 +125,27 @@ img {
     top: 820px;
     left: 770px;
 }
-/* .container {
-    max-width: 960px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    font-size: 24px; 
-    padding: 25px;
-    position: relative;
-}
-.parallax {
-    background: url("images/snow.gif") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 500px;
-} */
-.stats {
+.container {
     position: absolute;
     top: 1050px;
-    height: 300px;
+    height: 650px;
     width: 100%;
 	padding: 0;
 	margin: 0;
     opacity: 1;
-    background-color: #4364C4;
-    color: white;
+    color: black;
     font-size: 1.3em;
-    z-index: 3;
-    /* background: url("images/snow.gif") no-repeat center; */
-    /* background-size: cover;
+    /* background-color: #EBC43E; */
+    background: linear-gradient(#EBC43E, red);
+    background-size: cover;
     background-attachment: fixed;
-    height: 500px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* z-index: -1; */
 }
-section.fadeIn {
-	animation: fadeIn 1.2s forwards;
+div {
+    z-index: 4;
+    overflow: visible;
+    position: center;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
 
-  100% {
-    opacity: 1;
-  }
-}
