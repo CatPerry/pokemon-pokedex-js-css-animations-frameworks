@@ -36,7 +36,7 @@ nav a {
     left: 50%;
     margin-top: -32px;
     margin-right: -50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 h2 {
     color: black;
@@ -68,6 +68,7 @@ li {
     display: grid;
     border-radius: 3px;
     opacity: 0.9;
+    box-shadow: 1px 1px 1px 1px rgba(50, 230, 200, 0.479)
 }
 img {
     margin: 3px;
@@ -180,10 +181,14 @@ img {
     text-align: center;
     /* z-index: -1; */
 }
+.talonflameimg, .guzzlordimg {
+    border: 4px black;
+}
 div {
     z-index: 4;
     overflow: visible;
     position: center;
+    box-shadow: black( 10px, 10px, 10px);
 }
 /* .card {
     animation: bounce ease 2s;
