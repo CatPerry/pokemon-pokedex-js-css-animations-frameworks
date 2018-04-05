@@ -1,7 +1,7 @@
 /* Hex colors #EBC43E, #4364C4 */
 nav {
-    height: 75px;
-    background-color: #EBC43E;
+    height: 65px;
+    background: rgb(50, 230, 200);
     margin: 3px;
     padding: 0px;
     position: relative;
@@ -9,13 +9,13 @@ nav {
 }
 nav a {
     float: left; 
-    color: #4364C4;
+    color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.5em;
     display: block;
-    margin-top: 15px;
+    margin-top: 0px;
     text-align: center;
-    padding: 14px;
+    padding: 10px;
     text-decoration: none; 
 }
 .sticky {
@@ -34,12 +34,23 @@ nav a {
     height: 60px;
     top: 100%;
     left: 50%;
-    margin-top: -40px;
+    margin-top: -32px;
     margin-right: -50%;
     transform: translate(-50%, -50%); 
 }
+h2 {
+    color: black;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 2px rgb(50, 230, 200);
+}
+h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 3px;
+    margin-bottom: -2px;
+}
 body {
-    background-image: url(images/fuji1.svg);
+    background:  linear-gradient( rgba(255, 0, 212, 0.555), rgba(50, 230, 200, 0.671)), url(images/snow2.gif), url(images/fuji1.jpg);
     background-size: cover;
     width: 100%;
     height: 600px;
@@ -48,7 +59,7 @@ body {
     background-repeat: no-repeat;
 }
 li {
-    background-color: rgba(25, 106, 255, 0.884);
+    background-color: rgba(11, 30, 65, 0.884);
     font-family: fantasy;
     color: white;
     font-size: 1.8em;
@@ -75,25 +86,24 @@ img {
 }
 @keyframes fly {
     from {
-      transform: translateX(700px) scale(1);
+      transform: translateX(700px) scale(0.7);
     }   
     to {
-      transform: translateX(-850px) scale(2.0);
+      transform: translateX(-850px) scale(2.2);
     }
 }
 #guzzlord {
     position: absolute;
-    top: 270px;
-    left: 50px;
-    transform: scale(0.85);
+    top: 250px;
+    left: 20px;
+    transform: scale(0.80);
 }
 /* css shake/cubic bezier animation done with help from https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 #guzzlord:hover {
     animation: shake 0.60s cubic-bezier(.36,.07,.19,.97) both infinite;
-    animation-fill-mode: forwards;
+    animation-fill-mode: ease-out forwards;
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
-    perspective: 1000px;
 }
 @keyframes shake {
     10%, 90% {
@@ -116,31 +126,57 @@ img {
 }
 #blaziken {
     position: absolute;
-    top: 400px;
+    top: 370px;
     left: 800px;
-    transform: scaleX(-1) scale(0.9);
+    transform: scale(0.9);
+    animation: slidein1 ease 3s;
+    animation-iteration-count: 1;
+    /* transform-origin: 50% 50%; */
+    animation-fill-mode:forwards;
+    opacity: 0; 
 }
 .blaziken {
     position: absolute;
     top: 820px;
     left: 770px;
 }
+@keyframes slidein1 {
+  0% {
+    opacity:0;
+    transform:  translate(-900px)  ;
+  }
+  50% {
+    opacity:1;
+    transform:  translate(30px)  ;
+  }
+  80% {
+    transform:  translate(-10px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
 .container {
     position: absolute;
     top: 1050px;
-    height: 650px;
+    left: 30px;
+    right: 53.5;
+    height: 550px;
     width: 100%;
-	padding: 0;
-	margin: 0;
+	padding: 15px;
+	margin: 0 0 0;
     opacity: 1;
     color: black;
     font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /* background-color: #EBC43E; */
-    background: linear-gradient(#EBC43E, red);
+    background: linear-gradient( #FFFF, rgb(50, 230, 200), rgb(150, 11, 103));
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: black( 10px, 10px, 10px);
     /* z-index: -1; */
 }
 div {
