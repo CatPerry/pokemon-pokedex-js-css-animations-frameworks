@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    //pokemons!! 
+    //pokemons in my trainer array 
     class Cataclysm {
         constructor() {
             this.all = []
-            //all is the array of pokemon
         }
         add(character) {
             this.all.push(character)
@@ -42,6 +41,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let img = document.createElement("img")
             let li = document.createElement("li")
             let h2 = document.createElement("h2")
+            let abilitiesData = response.data.abilities
+
+            function abilities(abilitiesData) {
+                let abilitiesList = []
+                for (let i = 0; i < abilitiesData.length; i++) {
+                    // console.log(abilitiesData[i].ability.name)
+                    abilitiesList.push(abilitiesData[i].ability.name)
+                }
+                abilitiesList.toString()
+                return abilitiesList
+            }
 
             let guzzlord = new Pokemon (
                 data.name,
@@ -49,7 +59,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 data.stats[5].base_stat,
                 data.stats[4].stat.name,
                 data.stats[4].base_stat,
-                data.abilities[0].ability.name,
+                abilities(abilitiesData),
                 data.stats[3].stat.name,
                 data.stats[3].base_stat
             )
@@ -86,7 +96,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let li = document.createElement("li")
             let h2 = document.createElement("h2")
             let data = response.data
-            // pokeball.push(data)
+            let abilitiesData = response.data.abilities
+
+            function abilities(abilitiesData) {
+                let abilitiesList = []
+                for (let i = 0; i < abilitiesData.length; i++) {
+                    // console.log(abilitiesData[i].ability.name)
+                    abilitiesList.push(abilitiesData[i].ability.name)
+                }
+                abilitiesList.toString()
+                return abilitiesList
+            }
 
             let talonflame = new Pokemon (
                 data.name,
@@ -94,7 +114,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 data.stats[5].base_stat,
                 data.stats[4].stat.name,
                 data.stats[4].base_stat,
-                data.abilities[0].ability.name,
+                abilities(abilitiesData),
                 data.stats[3].stat.name,
                 data.stats[3].base_stat
             )
@@ -130,7 +150,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let li = document.createElement("li")
             let h2 = document.createElement("h2")
             let data = response.data
-            // pokeball.push(data)
+            let abilitiesData = response.data.abilities
+
+            function abilities(abilitiesData) {
+                let abilitiesList = []
+                for (let i = 0; i < abilitiesData.length; i++) {
+                    // console.log(abilitiesData[i].ability.name)
+                    abilitiesList.push(abilitiesData[i].ability.name)
+                }
+                abilitiesList.toString()
+                return abilitiesList
+            }
 
             let blaziken = new Pokemon (
                 data.name,
@@ -138,7 +168,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 data.stats[5].base_stat,
                 data.stats[4].stat.name,
                 data.stats[4].base_stat,
-                data.abilities[0].ability.name,
+                abilities(abilitiesData),
                 data.stats[3].stat.name,
                 data.stats[3].base_stat
             )

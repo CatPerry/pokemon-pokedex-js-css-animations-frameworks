@@ -81,15 +81,15 @@ img {
 }
 .talonflame {
     position: absolute;
-    top: 265px;
-    left: 1140px;
+    top: 170px;
+    left: 1250px;
 }
 @keyframes fly {
     from {
-      transform: translateX(870px) scale(0.7);
+      transform: translateX(700px) scale(0.7);
     }   
     to {
-      transform: translateX(-850px) scale(2.0);
+      transform: translateX(-850px) scale(2.2);
     }
 }
 #guzzlord {
@@ -121,7 +121,7 @@ img {
 }
 .guzzlord {
     position: absolute;
-    top: 685px;
+    top: 730px;
     left: 50px;
 }
 #blaziken {
@@ -137,8 +137,8 @@ img {
 }
 .blaziken {
     position: absolute;
-    top: 785px;
-    left: 840px;
+    top: 800px;
+    left: 800px;
 }
 @keyframes slidein1 {
   0% {
@@ -165,7 +165,7 @@ img {
     height: 550px;
     width: 100%;
 	padding: 15px;
-	margin: -4 0 0;
+	margin: 0 0 0;
     opacity: 1;
     color: black;
     font-size: 1.3em;
@@ -177,7 +177,6 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: black( 10px, 10px, 10px);
-    text-align: center;
     /* z-index: -1; */
 }
 div {
@@ -185,9 +184,3 @@ div {
     overflow: visible;
     position: center;
 }
-/* .card {
-    animation: bounce ease 2s;
-}
-@keyframes bounce {
-
-} */
