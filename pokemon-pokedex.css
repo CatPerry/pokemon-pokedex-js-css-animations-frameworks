@@ -1,4 +1,131 @@
 /* Hex colors #EBC43E, #4364C4 */
+/* .pokeball {
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    opacity: 0;
+    animation: appear 6s infinite linear;
+    animation-fill-mode: forwards;
+}
+@keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.pokeball:hover {
+    transform: rotate(360deg);
+	cursor: pointer;
+    transition: transform 2s 0s ease-in; */
+	/* background-blend-mode: screen; */
+/* }
+.landingpg {
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 6;
+} */
+.pokeballlanding {
+    background: linear-gradient( rgba(255, 0, 212, 0.555), rgba(50, 230, 200, 0.671)), url(images_v2/Pokeball.png), url(images_v2/explosion.gif);
+    width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 3;
+}
+.pokeball {
+    z-index: 4;
+}
+#enterhere {
+    position: absolute;
+    top: 520;
+    left: 320px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.6em;
+    text-align: center;
+}
+.littlepokeball {
+    width: 40px;
+    position: absolute;
+    top: 70px;
+    left: 370px;
+}
+.shadowcat {
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    border-radius: 10px;
+    z-index: 0;
+    animation: catglide 5s;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#shadowcat {
+    animation: spinner 4s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    transform: rotate(360deg);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes catglide {
+    from {
+      transform: translateX(-400px);
+    }   
+    to {
+      transform: translateX(1400px);
+    }
+}
+@keyframes spinner {
+    from {
+      transform: rotateZ(0deg)
+    }   
+    to {
+      transform: rotateZ(360deg);
+    }
+}
+.landpgtxt {
+    font-size: 5em;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.tinycat {
+    width: 50px;
+    position: absolute;
+    top: 8px;
+    left: 1230px;
+}
+/* .pokeball {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    animation: pokeslide ease 5s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards;
+    opacity: 0; 
+}
+@keyframes pokeslide {
+  0% {
+    opacity:0;
+    transform:  translate(-1100px)  ;
+  }
+  50% {
+    opacity:1;
+    transform:  translate(30px)  ;
+  }
+  80% {
+    transform:  translate(-20px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+} */
 nav {
     height: 65px;
     background: rgb(50, 230, 200);

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-
     //pokemons in my trainer array 
     class Cataclysm {
         constructor() {
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             ul.appendChild(li)
             main.appendChild(ul)
             document.body.appendChild(main)
-
         })
 
     axios.get(`https://pokeapi.co/api/v2/pokemon/663/`)
@@ -101,7 +99,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             function abilities(abilitiesData) {
                 let abilitiesList = []
                 for (let i = 0; i < abilitiesData.length; i++) {
-                    // console.log(abilitiesData[i].ability.name)
                     abilitiesList.push(abilitiesData[i].ability.name)
                 }
                 abilitiesList.toString()
@@ -140,6 +137,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             main.appendChild(ul)
             document.body.appendChild(main)
         })
+
     axios.get(`https://pokeapi.co/api/v2/pokemon/257/`)
         .then((response) => {
             let main = document.querySelector("main")
@@ -151,7 +149,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let h2 = document.createElement("h2")
             let data = response.data
             let abilitiesData = response.data.abilities
-
+//per fizal's guidance I constructed a For loop to iterate over every abilities array item
             function abilities(abilitiesData) {
                 let abilitiesList = []
                 for (let i = 0; i < abilitiesData.length; i++) {
@@ -197,7 +195,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.log(error)
         })
 
- 
 
     // tutorial from https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
     window.addEventListener("scroll", function () {
