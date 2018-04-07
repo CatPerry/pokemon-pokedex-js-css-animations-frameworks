@@ -1,4 +1,78 @@
 /* Hex colors #EBC43E, #4364C4 */
+/* landing page animations and content */
+.pokeballlanding {
+    background: linear-gradient( rgba(255, 0, 212, 0.555), rgba(50, 230, 200, 0.671)), url(images_v2/Pokeball.png), url(images_v2/explosion.gif);
+    width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 3;
+}
+.pokeball {
+    z-index: 4;
+}
+#enterhere {
+    position: absolute;
+    top: 520;
+    left: 320px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.6em;
+    text-align: center;
+}
+.littlepokeball {
+    width: 40px;
+    position: absolute;
+    top: 70px;
+    left: 370px;
+}
+.shadowcat {
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    border-radius: 10px;
+    z-index: 0;
+    animation: catglide 5s;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#shadowcat {
+    animation: spinner 4s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    transform: rotate(360deg);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes catglide {
+    from {
+      transform: translateX(-400px);
+    }   
+    to {
+      transform: translateX(1400px);
+    }
+}
+@keyframes spinner {
+    from {
+      transform: rotateZ(0deg)
+    }   
+    to {
+      transform: rotateZ(360deg);
+    }
+}
+.landpgtxt {
+    font-size: 5em;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.tinycat {
+    width: 50px;
+    position: absolute;
+    top: 8px;
+    left: 1230px;
+}
+/* main page */
 nav {
     height: 65px;
     background: rgb(50, 230, 200);
@@ -36,7 +110,7 @@ nav a {
     left: 50%;
     margin-top: -32px;
     margin-right: -50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 h2 {
     color: black;
@@ -68,6 +142,7 @@ li {
     display: grid;
     border-radius: 3px;
     opacity: 0.9;
+    box-shadow: 1px 1px 1px 1px rgba(50, 230, 200, 0.479)
 }
 img {
     margin: 3px;
@@ -81,15 +156,15 @@ img {
 }
 .talonflame {
     position: absolute;
-    top: 170px;
-    left: 1250px;
+    top: 265px;
+    left: 1140px;
 }
 @keyframes fly {
     from {
-      transform: translateX(700px) scale(0.7);
+      transform: translateX(870px) scale(0.7);
     }   
     to {
-      transform: translateX(-850px) scale(2.2);
+      transform: translateX(-850px) scale(2.0);
     }
 }
 #guzzlord {
@@ -121,7 +196,7 @@ img {
 }
 .guzzlord {
     position: absolute;
-    top: 730px;
+    top: 685px;
     left: 50px;
 }
 #blaziken {
@@ -131,14 +206,13 @@ img {
     transform: scale(0.9);
     animation: slidein1 ease 4s;
     animation-iteration-count: 1;
-    /* transform-origin: 50% 50%; */
     animation-fill-mode:forwards;
     opacity: 0; 
 }
 .blaziken {
     position: absolute;
-    top: 800px;
-    left: 800px;
+    top: 785px;
+    left: 840px;
 }
 @keyframes slidein1 {
   0% {
@@ -157,30 +231,81 @@ img {
     transform:  translate(0px,0px)  ;
   }
 }
+/* materialize container styling */
 .container {
     position: absolute;
-    top: 1050px;
+    top: 1000px;
     left: 30px;
     right: 53.5;
     height: 550px;
     width: 100%;
 	padding: 15px;
-	margin: 0 0 0;
+	margin: -4 0 0;
     opacity: 1;
     color: black;
     font-size: 1.3em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* background-color: #EBC43E; */
     background: linear-gradient( #FFFF, rgb(50, 230, 200), rgb(150, 11, 103));
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: black( 10px, 10px, 10px);
-    /* z-index: -1; */
+    text-align: center;
+}
+.talonflameimg, .guzzlordimg {
+    border: 4px black;
+}
+#explodePic1 {
+    opacity: 0;
+    position: absolute;
+    top: 1550px;
+    left: 0px;
+}
+#explodePic2 {
+    opacity: 0;
+    position: absolute;
+    top: 1550px;
+    left: 520px;
 }
 div {
     z-index: 4;
     overflow: visible;
     position: center;
+    box-shadow: black( 10px, 10px, 10px);
+}
+#fadeIn {
+    opacity: 1;
+    animation: fadeIn 1.2s forwards;
+    position: absolute;
+    top: 1550px;
+    left: 27px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+#fadeIn2 {
+    opacity: 1;
+    animation: fadeIn 1.2s forwards;
+    position: absolute;
+    top: 1550px;
+    left: 667px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

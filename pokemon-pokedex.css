@@ -1,32 +1,5 @@
 /* Hex colors #EBC43E, #4364C4 */
-/* .pokeball {
-    width: 500px;
-    position: absolute;
-    top: 100px;
-    left: 500px;
-    opacity: 0;
-    animation: appear 6s infinite linear;
-    animation-fill-mode: forwards;
-}
-@keyframes appear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-.pokeball:hover {
-    transform: rotate(360deg);
-	cursor: pointer;
-    transition: transform 2s 0s ease-in; */
-	/* background-blend-mode: screen; */
-/* }
-.landingpg {
-    background-size: cover;
-    width: 100%;
-    height: 600px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 6;
-} */
+/* landing page animations and content */
 .pokeballlanding {
     background: linear-gradient( rgba(255, 0, 212, 0.555), rgba(50, 230, 200, 0.671)), url(images_v2/Pokeball.png), url(images_v2/explosion.gif);
     width: 100%;
@@ -99,33 +72,7 @@
     top: 8px;
     left: 1230px;
 }
-/* .pokeball {
-    position: absolute;
-    top: 20px;
-    left: 400px;
-    animation: pokeslide ease 5s;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-    animation-fill-mode:forwards;
-    opacity: 0; 
-}
-@keyframes pokeslide {
-  0% {
-    opacity:0;
-    transform:  translate(-1100px)  ;
-  }
-  50% {
-    opacity:1;
-    transform:  translate(30px)  ;
-  }
-  80% {
-    transform:  translate(-20px)  ;
-  }
-  100% {
-    opacity:1;
-    transform:  translate(0px,0px)  ;
-  }
-} */
+/* main page */
 nav {
     height: 65px;
     background: rgb(50, 230, 200);
@@ -259,7 +206,6 @@ img {
     transform: scale(0.9);
     animation: slidein1 ease 4s;
     animation-iteration-count: 1;
-    /* transform-origin: 50% 50%; */
     animation-fill-mode:forwards;
     opacity: 0; 
 }
@@ -285,9 +231,10 @@ img {
     transform:  translate(0px,0px)  ;
   }
 }
+/* materialize container styling */
 .container {
     position: absolute;
-    top: 1050px;
+    top: 1000px;
     left: 30px;
     right: 53.5;
     height: 550px;
@@ -298,7 +245,6 @@ img {
     color: black;
     font-size: 1.3em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* background-color: #EBC43E; */
     background: linear-gradient( #FFFF, rgb(50, 230, 200), rgb(150, 11, 103));
     background-size: cover;
     background-attachment: fixed;
@@ -306,10 +252,21 @@ img {
     background-repeat: no-repeat;
     box-shadow: black( 10px, 10px, 10px);
     text-align: center;
-    /* z-index: -1; */
 }
 .talonflameimg, .guzzlordimg {
     border: 4px black;
+}
+#explodePic1 {
+    opacity: 0;
+    position: absolute;
+    top: 1550px;
+    left: 0px;
+}
+#explodePic2 {
+    opacity: 0;
+    position: absolute;
+    top: 1550px;
+    left: 520px;
 }
 div {
     z-index: 4;
@@ -317,9 +274,38 @@ div {
     position: center;
     box-shadow: black( 10px, 10px, 10px);
 }
-/* .card {
-    animation: bounce ease 2s;
+#fadeIn {
+    opacity: 1;
+    animation: fadeIn 1.2s forwards;
+    position: absolute;
+    top: 1550px;
+    left: 27px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
 }
-@keyframes bounce {
+#fadeIn2 {
+    opacity: 1;
+    animation: fadeIn 1.2s forwards;
+    position: absolute;
+    top: 1550px;
+    left: 667px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
 
-} */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
